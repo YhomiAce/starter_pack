@@ -1,0 +1,14 @@
+extends layouts
+
+block content
+  form(action="/upload" method="post" enctype="multipart/form-data")
+    h1 File upload
+    
+    .form-group
+      label(for='exampleFormControlFile1') Upload files
+      input#exampleFormControlFile1.form-control-file(type='file' name="myFile")
+    input(class="btn btn-success" type="submit" value="Upload File")
+    br
+    hr
+    if file != null 
+      img(src=file class="img-thumbnail") 

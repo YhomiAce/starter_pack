@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title></title>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/index.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="container mx-auto mt-5">
+      <h1><%= post.title %></h1>
+      <small>Written by:<%= post.author %>, date:<%=post.date%></small>
+      <div class="card">
+        <div class="card-body bg-light">
+          <p><%= post.body %> </p>
+          <a href="/posts/edit/<%=post._id %>" class="btn btn-secondary">Edit</a>
+          <a href="#" data-id="<%=post._id %>" class="btn btn-primary float-right delBtn">Delete</a>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title></title>
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <h1>Blog Post</h1>
+      <div class="well">
+        <ul class="list-group">
+          <% for(var i=0; i<posts.length; i++){ %>
+           <a href="/posts/show/<%=posts[i]._id %>" >
+             <li class="list-group-item"><%=posts[i].title %></li>
+           </a>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>

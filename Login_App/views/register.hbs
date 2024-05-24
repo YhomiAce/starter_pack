@@ -1,0 +1,27 @@
+
+<div class="register">
+  <h1>Register Page</h1>
+  {{> _message}}
+  <form class="form" action="" method="post">
+    <div class="form-input">
+      <label for="">Full name</label>
+      <input type="text" name="name" value="{{name}}">
+    </div>
+    <div class=" form-input">
+      <label for="">Email</label>
+      <input type="text" name="email" value="{{email}}">
+    </div>
+    <div class="form-input">
+      <label for="">Password</label>
+      <input type="password" name="password">
+    </div>
+    <div class="form-input">
+      <label for="">Confirm Password</label>
+      <input type="password" name="password2">
+    </div>
+    <div class="btn-div">
+      <button type="submit" class="btn btn-secondary">Register</button>
+      <a href="/auth/google" class="btn btn-primary">Login with Google</a>
+    </div>
+  </form>
+</div>

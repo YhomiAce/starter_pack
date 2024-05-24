@@ -1,0 +1,26 @@
+extends ../layouts
+
+block content
+  .row.justify-content-center
+    .col-md-8
+      form(method="post" action="/posts/add" enctype="multipart/form-data")
+        h2 Add Post
+        .form-group
+          label Post Title
+          input(type="text" name="title" class="form-control")
+        .form-group
+          label Post Category
+          select(class="form-control" name="category")
+            option(value="" selected disabled) select category
+            if categories.length > 0
+              each category, i in categories
+                option(value=category._id) #{category.name}
+        .form-group
+          label Post Content
+          textarea(class="form-control" rows="15" name="content")
+        .form-group
+          input(type="file" class="custom-file-input" name="postImg")
+        .form-group
+          button.btn.btn-success.btn-block(type="submit") Create Post
+          
+        

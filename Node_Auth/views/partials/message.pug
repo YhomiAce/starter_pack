@@ -1,0 +1,11 @@
+if error !=''
+  div.alert.alert-danger #{error}
+if error_msg != ""
+  div.alert.alert-warning #{error_msg} 
+if success_msg != ""
+  div.alert.alert-success #{success_msg}  
+if errors
+ each error, i in errors
+  div.alert.alert-danger #{error}
+if msg != null
+  .alert.alert-danger #{msg}

@@ -1,0 +1,23 @@
+extends layouts
+block content
+  div.container.mt-4
+    .row.justify-content-center
+      .col-md-8
+        h3.text-success.text-center.mb-2
+          | Contact Us
+        form(method="POST" action="/send-message")
+          p.text-warning
+            | #{Msg}
+          div.form-group
+            label
+              | Name
+            input.form-control(type="text" placeholder="Enter Name..." name="name")
+          div.form-group
+            label
+              | Email
+            input.form-control(type="emil" placeholder="Enter E-mail..." name="email")
+          div.form-group
+            label
+              | Message
+            textarea.form-control(placeholder="Enter Name..." rows="10" name="msg")
+          button.btn.btn-primary(type="submit") Send Message

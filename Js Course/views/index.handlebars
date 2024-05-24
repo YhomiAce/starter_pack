@@ -1,0 +1,8 @@
+<h1 class="text-success">Welcome To {{title}} </h1>
+
+<h2 class="text-center mb-4">Members</h2>
+<ul class="list-group">
+    {{#each members}}
+        <li class="list-group-item">{{this.name}}:{{this.email}} </li>
+    {{/each}}
+</ul>
